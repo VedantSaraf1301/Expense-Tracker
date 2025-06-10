@@ -1,0 +1,194 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(145deg, #1f1f1f, #2c2c2c);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+  padding: 25px;
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.01);
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+  color: #bb86fc;
+  text-align: center;
+}
+
+#product-list {
+  margin-bottom: 30px;
+}
+
+.product {
+  background-color: #2c2c2c;
+  padding: 15px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  border-left: 4px solid #6200ea;
+  transition: background-color 0.3s;
+}
+
+.product:hover {
+  background-color: #383838;
+}
+
+.product span {
+  font-size: 16px;
+}
+
+.product button {
+  background-color: #6200ea;
+  border: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product button:hover {
+  background-color: #3700b3;
+}
+
+#cart-items {
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+#cart-total {
+  text-align: right;
+}
+
+#total-price {
+  font-weight: bold;
+  color: #03dac6;
+}
+
+#checkout-btn {
+  background-color: #03dac6;
+  border: none;
+  padding: 10px 18px;
+  color: #000;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+#checkout-btn:hover {
+  background-color: #00bfa5;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Stylish form inputs and button */
+#expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+#expense-form input[type="text"],
+#expense-form input[type="number"] {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #292929;
+  color: #fff;
+  font-size: 15px;
+  transition: box-shadow 0.2s, background 0.2s;
+  box-shadow: 0 2px 8px rgba(98, 0, 234, 0.08);
+  outline: none;
+}
+
+#expense-form input[type="text"]:focus,
+#expense-form input[type="number"]:focus {
+  background: #333;
+  box-shadow: 0 0 0 2px #bb86fc;
+}
+
+#expense-form button[type="submit"] {
+  background-color: #03dac6;
+  color: #1e1e1e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  margin-top: 5px;
+  box-shadow: 0 2px 8px rgba(3, 218, 198, 0.15);
+}
+
+#expense-form button[type="submit"]:hover {
+  background-color: #018786;
+  color: #fff;
+}
+
+/* Stylish delete button for expenses */
+.delete-btn {
+  background-color: #ff5252;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 14px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 12px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(255, 82, 82, 0.12);
+}
+
+.delete-btn:hover {
+  background-color: #c62828;
+  color: #fff;
+}
+
+/* Responsive tweak */
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+
+  .product span {
+    font-size: 14px;
+  }
+
+  .product button {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
